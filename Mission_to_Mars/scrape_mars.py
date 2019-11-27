@@ -50,10 +50,9 @@ def scrape_info():
     browser.visit(url)
 
     browser.find_by_id("full_image").first.click()
-
+    time.sleep(1)
 
     # Click full image button(code above) then click the more info button on the second page to get to the image link for the lg file.
-
 
     browser.click_link_by_partial_text('more info')
 
@@ -151,7 +150,8 @@ def scrape_info():
     # Return results
     return mars_data
 
-
+if __name__ == "__main__":
+    print(scrape_info())
 
 
 
